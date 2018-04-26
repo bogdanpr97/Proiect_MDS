@@ -25,7 +25,31 @@ body{
 	text-decoration: none;
 	border: 0;
 }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+	left: 0;
+}
 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 img{
 	max-width: 100%;
 }
@@ -93,26 +117,53 @@ img{
 }
 
 .showcase{
+	position: relative;
 	grid-area: showcase;
 	min-height: 400px;
 	/*background: url(img/showcase.jpg);*/
 	background-size: cover;
 	background-position: center;
 	padding: 3rem;
+	
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content:center;
+	
 }
 .showcase h1{
 	font-size: 5rem;
 	margin-bottom: 0px;
 	color: var(--light);
+	text-align: right;
 }
 .showcase p{
 	font-size: 3rem;
 	margin-bottom: 0px;
 	color: var(--light);
+	text-align: right;
+}
+.dots{
+	position: absolute;
+	width: 100%;
+	bottom: 1%;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
 }
 .topbox{
 	background: var(--primary);

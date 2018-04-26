@@ -5,6 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width , initial-scale=1">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script
+  src=" http://code.jquery.com/jquery-3.3.1.min.js "
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
 	<style type="">
 	   
@@ -35,11 +40,24 @@
      </nav>
 
      <!-- Header -->
+
+      
      <section class="top-container">
      <header id="show" class="showcase">
+
      	<h1>Pro Gains</h1>
+
      	<p>Lorem ipsum</p>
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+         <div class="dots" style="text-align:center">
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+     </div>
      </header>
+   
      <div class="topbox topbox-1">
      	<h4>Abonament</h4>
      	<p class="price">150 RON</p>
