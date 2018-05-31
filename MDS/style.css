@@ -80,6 +80,7 @@ img{
 
 .main-nav {
 	grid-area: main-nav;
+
 }
 
 .main-nav ul{
@@ -89,7 +90,6 @@ img{
 	list-style: none;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .main-nav a{
 	background: var(--primary);
 	display: block;
@@ -100,7 +100,41 @@ img{
 	text-transform: uppercase;
 	font-size: 1.1rem;
 	box-shadow: var(--shadow);
+	
 }
+ul.sub-menu {
+    display: flex;
+    position: absolute;
+    width: 20%;
+    z-index: 1;
+    
+    flex-direction: column;
+    padding: 0.5rem;
+    box-shadow: var(--shadow);
+	background: var(--primary);
+	display: none;
+}
+ul.sub-menu li{
+	margin: 0.5rem;
+	padding: 0.8rem;
+	text-align: center;
+	color:var(--dark);
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	box-shadow: var(--shadow);
+}
+
+ul.sub-menu li:hover{
+     
+	background: var(--dark);
+	color:var(--light);
+}
+.main-nav li:hover .sub-menu{
+	opacity: 1;
+	justify-content: center;
+	display: block;
+}
+
 
 .main-nav a:hover{
 	background: var(--dark);
@@ -112,19 +146,17 @@ img{
 	display: grid;
 	grid-gap: 20px;
 	grid-template-areas:
-	'showcase showcase'
-	'topbox-1 topbox-2'
+	'showcase showcase topbox-1'
+	'showcase showcase topbox-2'
 }
 
 .showcase{
 	position: relative;
 	grid-area: showcase;
 	min-height: 400px;
-	/*background: url(img/showcase.jpg);*/
 	background-size: cover;
 	background-position: center;
 	padding: 3rem;
-	
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -207,3 +239,124 @@ footer{
 	text-align: center;
 	padding: 1rem;
 }
+/*  login html   */
+
+.loginbox{
+
+   width: 30%;
+   height: 50%;
+   background-color: rgba(0,0,0,0.5);
+   color: var(--light);
+   position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   box-sizing: border-box;
+   padding: 70px 30px;
+}
+.avatar{
+   width: 200px;
+   height: 200px;
+   position: absolute;
+   
+   top: -20%;
+   left: 33%;
+}
+.loginbox h1{
+	margin:0;
+	padding: 0 0 20px;
+	text-align: center;
+    font-size: 3rem;
+}
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+.loginbox input[type="text"],input[type="password"]{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--primary);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+}
+::placeholder{
+	color: darkgrey;
+}
+
+.loginbox input[type="submit"]{
+	border :none;
+	outline: none;
+	
+	background: var(--dark);
+	color: var(--light);
+	font-size: 2rem;
+	border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover{
+	cursor: pointer;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+.loginbox a{
+text-decoration:none;
+font-size: 1.5rem;
+color: var(--light);
+margin-left: 10%;
+font-weight: bold;
+float: left;
+}
+@media only screen and (max-width: 800px){
+	p {
+		font-size: 1.5rem;
+	} 
+	h1{
+		font-size: 2.7rem;
+	}
+	h3{
+		font-size: 2.3rem;
+	}
+	h4{
+		font-size: 2rem;
+	}
+	.wrapper{
+		grid-template-areas:
+	'account-box account-box account-box'
+	'main-nav main-nav main-nav'
+	'top-container top-container top-container'
+	'boxes boxes boxes'
+	'footer footer footer';
+	}
+	.top-container{
+		grid-template-areas: 
+		'showcase showcase'
+		'topbox-1 topbox-2';
+	}
+	.showcase h1{
+		font-size: 2.5rem;
+	}
+	.main-nav ul{
+		grid-template-columns: 1fr
+	}
+	.boxes{
+		grid-template-columns: 1fr;
+	}
+
+	.account-box{
+		width: 100%;
+	}
+	.account-box > .btn{
+         width: 50%;
+         text-align: center;
+
+	}
+}
+
