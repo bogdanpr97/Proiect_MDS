@@ -254,6 +254,12 @@ footer{
    box-sizing: border-box;
    padding: 70px 30px;
 }
+#login-register{
+	height: 80%;
+}
+#login-register > .avatar{
+	top: -12%;
+	}
 .avatar{
    width: 200px;
    height: 200px;
@@ -261,6 +267,13 @@ footer{
    
    top: -20%;
    left: 33%;
+}
+.account-box > .avatar{
+	width: 150px;
+   height: 150px;
+	position: absolute;
+	left: 3%;
+	top: -2%;
 }
 .loginbox h1{
 	margin:0;
