@@ -147,6 +147,7 @@ ul.sub-menu li:hover{
 	grid-gap: 20px;
 	grid-template-areas:
 	'showcase showcase topbox-1'
+	'showcase showcase topbox-2'
 }
 
 .showcase{
