@@ -1,0 +1,190 @@
+UserID: 6
+Comentariu: Test4
+Data: 1525374245
+
+UserID: 6
+Comentariu: Test5
+Data: 1525374256
+
+UserID: 6
+Comentariu: Test cu raspuns
+Data: 1525374465
+
+UserID: 6
+Comentariu: Test cu data
+
+
+UserID: 6
+Comentariu: Test cu data 2
+Data: 03 05 2018
+
+UserID: 6
+Comentariu: t3g3g33gg3
+Data: 03-05-2018
+
+UserID: 6
+Comentariu: Tesc cu bobi
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comentariu cu sterge
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comm nou
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: a
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: b
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: c
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: d
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: fwaf
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comentariu care trebuie editat.
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Acest comentariu a fost editat.
+Editat la data: 04-05-2018
+
+UserID: 6
+Comentariu: Acest comentariu a fost reeditat.
+Editat la data: 04-05-2018-06-09
+
+UserID: 6
+Comentariu: Acest comentariu a fost rereeditat.
+Editat la data: 04-05-2018-18-10-51
+
+UserID: 6
+Comentariu: D
+Editat la data: 04-05-2018-18-12-47
+
+UserID: 6
+Comentariu: Acest comentariu a fost rereeditat.fwafaw
+Editat la data: 04-05-2018-18-13-51
+
+UserID: 6
+Comentariu: grsese
+Editat la data: 04-05-2018-18-13-55
+
+UserID: 6
+Comentariu: gesges
+Editat la data: 04-05-2018-18-14-07
+
+UserID: 6
+Comentariu: hrdhrdhrd
+Editat la data: 04-05-2018-18-14-10
+
+UserID: 6
+Comentariu: gawags
+Editat la data: 04-05-2018-18-16-24
+
+UserID: 6
+Comentariu: Editat
+Editat la data: 04-05-2018-18-16-30
+
+UserID: 6
+Comentariu: Comentariul este editat.
+Editat la data: 04-05-2018-20-40-10
+
+UserID: 6
+Comentariu: fwafag
+Editat la data: 04-05-2018-22-20-51
+
+UserID: 6
+Comentariu: editat
+Editat la data: 04-05-2018-22-20-55
+
+UserID: 6
+Comentariu: fawfawfsw
+Editat la data: 04-05-2018-23-07-34
+
+UserID: 6
+Comentariu: fawfawfsw
+Editat la data: 04-05-2018-23-08-15
+
+UserID: 6
+Comentariu: sfw
+Editat la data: 04-05-2018-23-11-24
+
+UserID: 6
+Comentariu: Reeditat
+Editat la data: 05-05-2018-17-17-25
+
+UserID: 10
+Comentariu: Test cu raportare comentariu.
+Data: 06-05-2018-9-38-08
+
+UserID: 6
+Comentariu: fawfasfwag
+Editat la data: 06-05-2018-17-29-24
+
+UserID: 6
+Comentariu: editat
+Editat la data: 06-05-2018-17-29-28
+
+UserID: 6
+Comentariu: fwaFXZFAWFWA
+Editat la data: 07-05-2018-11-25-46
+
+UserID: 6
+Comentariu: test
+Data: 09-05-2018-22-04-19
+
+UserID: 6
+Comentariu: Test cu datafefs
+Editat la data: 09-05-2018-23-21-50
+
+UserID: 6
+Comentariu: Comentariu cu &#39;ghilimele&#39;.
+Data: 18-05-2018-15-29-09
+
+UserID: 6
+Comentariu: Test
+Data: 24-05-2018-22-08-45
+
+UserID: 6
+Comentariu: \r\n Test\r\n
+Data: 24-05-2018-22-09-59
+
+UserID: 6
+Comentariu: Test\r\nTest\r\nTest
+Data: 24-05-2018-22-10-13
+
+UserID: 6
+Comentariu: sn
+Editat la data: 24-05-2018-22-10-31
+
+UserID: 6
+Comentariu: test2
+Data: 01-06-2018-12-31-21
+
+UserID: 6
+Comentariu: test3
+Data: 01-06-2018-12-33-52
+
+UserID: 6
+Comentariu: test\r\ntest
+Data: 01-06-2018-12-36-53
+
+UserID: 6
+Comentariu: test
+cu
+spatiu
+Data: 01-06-2018-12-37-59
+

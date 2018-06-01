@@ -1,0 +1,7 @@
+ExpeditorID: 6
+DestinatarID: 9
+Subiect: Test mesaj privat
+Mesaj: Testare trimitere mesaj privat.
+Data: 05-05-2018-11-08-03
+
+

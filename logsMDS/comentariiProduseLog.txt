@@ -1,0 +1,40 @@
+UserID: 6
+Comentariu: Test comentariu din pagina.
+Data: 03-05-2018
+
+UserID: 6
+Comentariu: Comm 4
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: comm 5
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comm 6
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comm
+Data: 04-05-2018
+
+UserID: 6
+Comentariu: Comentariu editat.
+Editat la data: 04-05-2018-18-28-46
+
+UserID: 6
+Comentariu: tesge
+Editat la data: 05-05-2018-9-36-00
+
+UserID: 10
+Comentariu: test
+Data: 06-05-2018-16-38-54
+
+UserID: 6
+Comentariu: test
+Data: 09-05-2018-22-26-24
+
+UserID: 6
+Comentariu: Comentariu editat. test
+Editat la data: 09-05-2018-22-37-59
+
