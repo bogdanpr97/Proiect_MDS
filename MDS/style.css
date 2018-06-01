@@ -88,7 +88,7 @@ img{
 	grid-gap: 20px;
 	padding: 0;
 	list-style: none;
-	grid-template-columns: 1fr 1fr 1fr 1fr ;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .main-nav a{
 	background: var(--primary);
@@ -243,8 +243,8 @@ footer{
 
 .loginbox{
 
-   width: 35%;
-   height: 55%;
+   width: 30%;
+   height: 50%;
    background-color: rgba(0,0,0,0.5);
    color: var(--light);
    position: absolute;
@@ -254,28 +254,13 @@ footer{
    box-sizing: border-box;
    padding: 70px 30px;
 }
-#login-register{
-	top:40%;
-	height: 80%;
-}
-#login-register > input[type="email"]{
-   font-size: 1.5rem;
-}
-.loginbox > .avatar{
+.avatar{
    width: 200px;
    height: 200px;
    position: absolute;
    
    top: -20%;
    left: 33%;
-}
-.account-box > .avatar{
-    width: 150px;
-    height: 150px;
-	position: absolute;
-	left: 2%;
-	top: -2%;
-	
 }
 .loginbox h1{
 	margin:0;
@@ -329,7 +314,7 @@ margin-left: 10%;
 font-weight: bold;
 float: left;
 }
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 800px){
 	p {
 		font-size: 1.5rem;
 	} 
@@ -372,25 +357,6 @@ float: left;
          width: 50%;
          text-align: center;
 
-	}
-	.avatar{
-		left:  15%;
-	}
-	.loginbox{
-		height: 40%;
-	}
-	.loginbox input[type="submit"]{
-		font-size: 1rem;
-		height: 50px;
-	}
-	.loginbox a{
-      font-size: 1rem;
-	} 
-	.loginbox h1{
-           font-size: 1.5rem;
-	}
-	.loginbox p{
-		font-size: 1rem;
 	}
 }
 
