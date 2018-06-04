@@ -1,8 +1,8 @@
 /* Variabile */
 :root {
---primary: #bc5a45;
---dark: #36486b;
---light:#fefbd8;
+--primary: #55ACEE;
+--dark: #292F33;
+--light:#FFFFFF;
 --shadow: 0 1px 5px rgba(104,104,104,0.8);
 }
 
@@ -13,7 +13,7 @@ html{
 }
 
 body{
-	background: #f4e1d2;
+	background:  #CCD6DD;
 	margin: 30px 50px;
 	line-height: 1.4;
 }
@@ -146,8 +146,8 @@ ul.sub-menu li:hover{
 	display: grid;
 	grid-gap: 20px;
 	grid-template-areas:
-	'showcase showcase topbox-1'
-	'showcase showcase topbox-2'
+	'showcase  showcase '
+	'topbox-1  topbox-2 '
 }
 
 .showcase{
@@ -300,6 +300,27 @@ footer{
  outline: none;
  font-size: 1.5rem;
 }
+.topbox-1 input[type="text"]{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--primary);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+}
+#button-newsletter{
+	border :none;
+	outline: none;
+	background: var(--dark);
+	color: var(--light);
+	font-size: 2rem;
+	border-radius: 20px;
+}
+#button-newsletter:hover{
+	cursor: pointer;
+    background-color: var(--light);
+    color: var(--dark);
+}
 ::placeholder{
 	color: darkgrey;
 }
@@ -327,6 +348,8 @@ margin-left: 10%;
 font-weight: bold;
 float: left;
 }
+
+
 @media only screen and (max-width: 800px){
 	p {
 		font-size: 1.5rem;

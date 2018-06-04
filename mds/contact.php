@@ -19,7 +19,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width , initial-scale=1">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
+
 	<script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -27,37 +29,55 @@
     <style media="screen">
 		.sidebar-contact {
 			grid-area: sidebar-contact;
+			
+			border-right: 3px solid var(--primary);
+		}
+		.sidebar-contact > ul {
+			padding:0px;
 		}
 		.li-sidebar-contact {
 			width: 50%;
 			background-color: var(--primary);
 			color: var(--light);
-			border: 2px solid var(--dark);
-			padding: 2%;
+			border: 2px solid var(--shadow);
+			padding: 5%;
 			margin-bottom: 2%;
 			text-align: center;
 			transition: 0.5s linear;
+          
 		}
 		.li-sidebar-contact:hover {
 			background-color: var(--dark);
+			width: 60%;
+            
 		}
         .wrapper {
             grid-template-columns: 0.4fr 1fr 0.1fr;
             grid-template-areas:
             "account-box account-box account-box"
             "main-nav main-nav main-nav"
-            "sidebar-contact wrapper-contact . "
+            "sidebar-contact wrapper-contact wrapper-contact "
             "footer footer footer";
         }
         .wrapper-contact {
             grid-area: wrapper-contact;
+          
+        }
+        h2{
+        	font-size: 3rem;
+        }
+        h2,h3{
+      
+        	text-align:center;
         }
         .contact-form {
+
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .contact-container {
+
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas:
@@ -65,14 +85,27 @@
             "contact-posta contact-utile"
             "contact-form contact-form";
         }
+        #box1{
+        	font-size: 1.5rem;
+        	margin: 2%;
+        	background: var(--dark);
+        	color: var(--light);
+	text-align: justify;
+	padding: 1.5rem;
+	box-shadow: var(--shadow);
+        }
         .contact-email {
             grid-area: contact-email;
+           
+	
         }
         .contact-telefon {
             grid-area: contact-telefon;
+            
         }
         .contact-posta {
             grid-area: contact-posta;
+
         }
         .contact-form {
             grid-area: contact-form;
@@ -83,6 +116,39 @@
 		#result-contact-form {
 			margin-top: 3%;
 		}
+		.contact-form{
+			background-color: #618685;
+		}
+		.form-contact input[type="text"],textarea{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--dark);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+ margin: 1%;
+}
+::placeholder{
+	color: darkgrey;
+}
+
+#buton-submit{
+	margin: 2%;
+	border :none;
+	outline: none;
+	position: relative;
+	left: 30%;
+	background: var(--dark);
+	color: var(--light);
+	font-size: 2rem;
+	border-radius: 20px;
+}
+
+#buton-submit:hover{
+	cursor: pointer;
+    background-color: var(--primary);
+    color: var(--dark);
+}
     </style>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -210,20 +276,20 @@
          <div class="wrapper-contact">
              <h2>Contacteaza-ne</h2>
           <div class="contact-container">
-             <div class="contact-telefon">
+             <div class="contact-telefon" id="box1">
                  <h3>Telefon</h3>
 
 <p>Order online or call our customer services team on +44 (0) 345 241 2866 between 8:30am and 5:00pm (GMT), Monday to Friday.</p>
 
 <p>The customer services team are also happy to help with basic advice about which products to use, ordering and delivery enquiries.</p>
              </div>
-             <div class="contact-email">
+             <div class="contact-email" id="box1">
 
 <h3>Email</h3>
 
 <p>For all MaxiNutrition Shop enquiries please e-mail the customer services team:  customerservice@kruger-uk.com</p>
              </div>
-             <div class="contact-posta">
+             <div class="contact-posta" id="box1">
                  <h3>Posta</h3>
                  <ul>
 <li>MaxiNutrition</li>
@@ -234,7 +300,7 @@
 <li>CW5 6RS</li>
 </ul>
              </div>
-             <div class="contact-utile">
+             <div class="contact-utile" id="box1">
 
 <h3>Contacte utile</h3>
     <ul>

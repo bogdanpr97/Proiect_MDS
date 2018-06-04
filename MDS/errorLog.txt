@@ -1,0 +1,5 @@
+Error: The server requested authentication method unknown to the client
+Error: No connection could be made because the target machine actively refused it.
+
+Error: No connection could be made because the target machine actively refused it.
+

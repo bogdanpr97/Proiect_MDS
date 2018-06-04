@@ -25,21 +25,39 @@
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
     <style media="screen">
+     h2{
+        	font-size: 3rem;
+        }
+        h2,h3{
+      
+        	text-align:center;
+        }
+        p{
+        	text-align: justify;
+        }
 		.sidebar-contact {
 			grid-area: sidebar-contact;
+			
+			border-right: 3px solid var(--primary);
+		}
+		.sidebar-contact > ul {
+			padding:0px;
 		}
 		.li-sidebar-contact {
 			width: 50%;
 			background-color: var(--primary);
 			color: var(--light);
-			border: 2px solid var(--dark);
-			padding: 2%;
+			border: 2px solid var(--shadow);
+			padding: 5%;
 			margin-bottom: 2%;
 			text-align: center;
 			transition: 0.5s linear;
+          
 		}
 		.li-sidebar-contact:hover {
 			background-color: var(--dark);
+			width: 60%;
+            
 		}
         .wrapper {
             grid-template-columns: 0.4fr 1fr 0.1fr;

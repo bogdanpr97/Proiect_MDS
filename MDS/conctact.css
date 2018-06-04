@@ -1,0 +1,58 @@
+.sidebar-contact {
+			grid-area: sidebar-contact;
+		}
+		.li-sidebar-contact {
+			width: 50%;
+			background-color: var(--primary);
+			color: var(--light);
+			border: 2px solid var(--dark);
+			padding: 20%;
+			margin-bottom: 2%;
+			text-align: center;
+			transition: 0.5s linear;
+		}
+		.li-sidebar-contact:hover {
+			background-color: var(--dark);
+		}
+        .wrapper {
+            grid-template-columns: 0.4fr 1fr 0.1fr;
+            grid-template-areas:
+            "account-box account-box account-box"
+            "main-nav main-nav main-nav"
+            "sidebar-contact wrapper-contact . "
+            "footer footer footer";
+        }
+        .wrapper-contact {
+            grid-area: wrapper-contact;
+        }
+        .contact-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+            "contact-telefon contact-email"
+            "contact-posta contact-utile"
+            "contact-form contact-form";
+        }
+        .contact-email {
+            grid-area: contact-email;
+        }
+        .contact-telefon {
+            grid-area: contact-telefon;
+        }
+        .contact-posta {
+            grid-area: contact-posta;
+        }
+        .contact-form {
+            grid-area: contact-form;
+        }
+		.label-contact-form {
+			margin-right: 2%;
+		}
+		#result-contact-form {
+			margin-top: 3%;
+		}
