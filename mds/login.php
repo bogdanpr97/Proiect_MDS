@@ -183,105 +183,191 @@
 	  crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style media="screen">
-        .login-container {
-            grid-area: login-container;
-            display: grid;
-            align-items: center;
-            justify-content: center;
+        .loginbox{
+           width: 550px;
+           height: 600px;
+           background-color: rgba(0,0,0,0.5);
+           color: var(--light);
+           position: absolute;
+           top:50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           box-sizing: border-box;
+           padding: 70px 30px;
         }
-        .wrapper {
-            grid-template-areas:
-            "account-box account-box account-box"
-            "main-nav main-nav main-nav"
-            "login-container login-container login-container"
-            "footer footer footer";
+        #login-register{
+            height: 80%;
         }
-        .label-login-form {
-            margin-right: 2%;
+        #login-register > .avatar{
+            top: -12%;
+            }
+        .avatar{
+           width: 200px;
+           height: 200px;
+           position: absolute;
+
+           top: -20%;
+           left: 33%;
         }
-        .login-container div {
-            margin-bottom: 2%;
+        .account-box > .avatar{
+            width: 150px;
+           height: 150px;
+            position: absolute;
+            left: 3%;
+            top: -2%;
         }
-		#buton-parola-uitata {
-			margin-top: 2%;
-		}
+        .loginbox h1{
+            margin:0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .loginbox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+        .loginbox input:not(.no-style){
+            width: 100%;
+            margin-bottom: 5%;
+        }
+
+        .loginbox input[type="text"],input[type="password"]{
+         border: none;
+         border-bottom: 1px solid var(--light);
+         color: var(--primary);
+         background:transparent;
+         outline: none;
+         font-size: 1.5rem;
+        }
+        ::placeholder{
+            color: darkgrey;
+        }
+
+        .loginbox input[type="submit"]{
+            border :none;
+            outline: none;
+
+            background: var(--dark);
+            color: var(--light);
+            font-size: 2rem;
+            border-radius: 20px;
+        }
+
+        .loginbox input[type="submit"]:hover{
+            cursor: pointer;
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        .loginbox a, .loginbox #buton-parola-uitata{
+        text-decoration:none;
+        font-size: 1.5rem;
+        color: var(--light);
+        margin-left: 10%;
+        font-weight: bold;
+        float: left;
+        }
+        #buton-parola-uitata {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+        #buton-login-form {
+            margin-top: 2%;
+        }
 		#login-error {
 			margin-bottom: 0%;
 		}
+        #form-parola-uitata {
+            margin-top: 2%;
+        }
+        body{
+          background-image: url('img-site/login1.jpeg');
+
+          background-repeat: no-repeat;
+
+        }
+        @media only screen and (max-width: 800px){
+        	.loginbox h1{
+        		font-size: 1.5rem;
+        	}
+        	.loginbox h2{
+        		font-size: 1.5rem;
+        	}
+
+.loginbox a{
+        		font-size: 1.5rem;
+        	}
+
+        	.loginbox{
+           width: 300px;
+           height: 600px;
+           
+        }
+        }
     </style>
 	<script>
 		$(document).ready(function () {
+
+			$.urlParam = function(name){
+                var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                return results[1] || 0;
+            }
+
 			$("#buton-parola-uitata").on('click', function() {
 				$("#form-parola-uitata").toggle();
+                if($("#form-parola-uitata").css("display") == 'none') {
+                    $(".loginbox").css("height", '520');
+                } else {
+                    $(".loginbox").css("height", '650');
+                }
 			});
+
+			if($.urlParam("login") == 'error' || $.urlParam("login") == 'error' || $.urlParam("error") != 0 || $.urlParam("et") != 0) {
+				$(".loginbox").css("height", '565');
+			}
 		})
 	</script>
 </head>
 <body>
-     <div class="wrapper">
-     	<!-- Navigation -->
-	    <div class="account-box">
-        	<a class="btn" href="login.php">Login</a>
-        	<a class="btn" href="register.php">Register</a>
-        </div>
-     	<nav class="main-nav">
-     	<ul>
-     		<li>
-     			<a href="index.php">Acasa</a>
-     		</li>
-     		<li>
-     			<a href="produse.php">Produse</a>
-     		</li>
-     		<li>
-     			<a href="articole.php">Articole</a>
-     		</li>
-     		<li>
-     			<a href="contact.php">Contact</a>
-     		</li>
-			<li>
-				<?php
-				if(isset($_SESSION['produse']) && count($_SESSION['produse']) > 1) {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(' .  count($_SESSION['produse']) . ' produse)</a>';
-				} else if(isset($_SESSION['produse']) && count($_SESSION['produse']) == 0 || !isset($_SESSION['produse'])) {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(0 produse)</a>';
-				} else {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(1 produs)</a>';
-				}
-    				?>
-    			</li>
-         	</ul>
-         </nav>
-         <div class="login-container">
+        <div class="loginbox">
+             <img src="img-site/logo.png" class="avatar">
+			 <h1>Login</h1>
 			 <?php
 				if(isset($_GET["cv"])) {
 					if($_GET["cv"] == 1) {
-						echo '<form class="" action="login.php?cv=1" method="post" style="width: 500px;">';
+						echo '<form class="" action="login.php?cv=1" method="post">';
 					} else {
-						echo '<form class="" action="login.php" method="post" style="width: 500px;">';
+						echo '<form class="" action="login.php" method="post">';
 					}
 				} else {
-					echo '<form class="" action="login.php" method="post" style="width: 500px;">';
+					echo '<form class="" action="login.php" method="post">';
 				}
 			 ?>
-                 <div><label class="label-login-form" for="username">Username/Email</label><input type="text" name="username-email" value="" placeholder="Username/Email"></div>
-                 <div><label class="label-login-form" for="password">Password</label><input type="password" name="password" value="" placeholder="Parola"></div>
+                 <p>Username</p>
+                 <input type="text" name="username-email" placeholder="Username/email">
+                 <p>Parola</p>
+                 <input type="password" name="password"  placeholder="Parola">
+                 <p>Remember me
+                 <input class="no-style" type="checkbox" name="rememberme" value=""></p>
 				 <?php
 				 	if(isset($_GET["cv"])) {
 						if($_GET["cv"] == 1) {
-							echo '<div><label class="label-login-form" for="cod_verificare">Cod verificare</label><input type="text" name="cod_verificare" placeholder="Cod Verificare"></div>';
+							echo '<p>Cod verificare</p><input type="text" name="cod_verificare" placeholder="Cod Verificare">';
 						}
 					}
 				 ?>
-                 <div><label class="label-login-form" for="rememberme">Remember me</label><input type="checkbox" name="rememberme" value=""></div>
-                 <button  id="buton-login-form" type="submit" name="login-submit">Log in</button>
-             </form>
-			 <div class="parola-uitata">
-			 	<button id="buton-parola-uitata" type="button" name="button">Am uitat parola</button>
-				<form id="form-parola-uitata" action="parola-uitata.php" method="post" style="display: none; margin-top: 2%;">
-					<div><label for="email-parola-uitata" style="margin-right: 2%;">Email pentru a trimite confirmarea resetarii parolei</label><input type="text" name="email-parola-uitata" value="" placeholder="Email"></div>
-					<button type="submit" name="buton-email-pu">Trimite mail de confirmare</button>
-				</form>
-			 </div>
+                 <input id="buton-login-form" type="submit" name="login-submit" value="Inainte">
+                 </form>
+                 <div style="overflow: auto;">
+                     <a href="register.php">Nu am cont</a>
+                     <button id="buton-parola-uitata" type="button" name="button">Am uitat parola</button>
+                 </div>
+    				<form id="form-parola-uitata" action="parola-uitata.php" method="post" style="display: none;">
+    					<p style="font-size: 1.2rem;">Email pentru a trimite confirmarea resetarii parolei</p><input type="text" name="email-parola-uitata" value="" placeholder="Email">
+    					<input type="submit" name="buton-email-pu" value="Trimite mail de confirmare">
+    				</form>
 			 <?php
 			 	if(isset($_GET["et"]) && !isset($_GET['error=invalid'])) {
 					echo '<h4>Mailul pentru confirmarea resetarii parolei a fost trimis</h4>';
@@ -290,20 +376,15 @@
 				}
 			 ?>
 			 <div id="login-error">
-			 	<?php
-					if(isset($_GET['login']) && ($_GET['login'] == 'error' || $_GET['login'] == 'empty')) {
-						echo '<h4>Eroare la incercarea de a intra in cont, verificati daca ati introdus corect campurile.</h4>';
-					} else if(isset($_GET['login']) && $_GET['login'] == 'error-ban') {
-						echo '<h4>Contul este blocat pana in data: ' . $_GET['ban'] . '.</h4>';
-					}
-				?>
-			 </div>
-         </div>
-      </div>
-      <footer>
-      	<p>Pro Gains &copy; 2018</p>
-      </footer>
-  </div>
+	 		   <?php
+	 			   if(isset($_GET['login']) && ($_GET['login'] == 'error' || $_GET['login'] == 'empty')) {
+	 				   echo '<h4>Eroare la incercarea de a intra in cont, verificati daca ati introdus corect campurile.</h4>';
+	 			   } else if(isset($_GET['login']) && $_GET['login'] == 'error-ban') {
+	 				   echo '<h4>Contul este blocat pana in data: ' . $_GET['ban'] . '.</h4>';
+	 			   }
+	 		   ?>
+	 	   </div>
+        </div>
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

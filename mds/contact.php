@@ -36,7 +36,7 @@
 			padding:0px;
 		}
 		.li-sidebar-contact {
-			width: 50%;
+			width: 60%;
 			background-color: var(--primary);
 			color: var(--light);
 			border: 2px solid var(--shadow);
@@ -48,7 +48,7 @@
 		}
 		.li-sidebar-contact:hover {
 			background-color: var(--dark);
-			width: 60%;
+			width: 70%;
             
 		}
         .wrapper {
@@ -141,7 +141,7 @@
 	background: var(--dark);
 	color: var(--light);
 	font-size: 2rem;
-	border-radius: 20px;
+	
 }
 
 #buton-submit:hover{
@@ -149,6 +149,34 @@
     background-color: var(--primary);
     color: var(--dark);
 }
+@media only screen and (max-width: 1000px){
+	
+	.li-sidebar-contact {
+			width: 80%;
+	}
+	.sidebar-contact {
+		border-right: 0px;
+	}
+	.li-sidebar-contact:hover {
+			background-color: var(--dark);
+			width: 90%;
+            
+		}
+	.contact-container {
+            margin: 0px;
+            display: block;
+        }
+          .wrapper {
+            grid-template-columns:  1fr 0.1fr;
+            grid-template-areas:
+            "account-box "
+            "main-nav"
+            "sidebar-contact"
+            " wrapper-contact"
+            "wrapper-contact"
+            "footer";
+        } 
+        }
     </style>
 	<script type="text/javascript">
 		$(document).ready(function() {

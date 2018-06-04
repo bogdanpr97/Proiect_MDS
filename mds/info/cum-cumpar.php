@@ -70,6 +70,31 @@
         .wrapper-CC {
             grid-area: wrapper-CC;
         }
+         @media only screen and (max-width: 1000px){
+	
+	.li-sidebar-contact {
+			width: 80%;
+	}
+	.sidebar-contact {
+		border-right: 0px;
+	}
+	.li-sidebar-contact:hover {
+			background-color: var(--dark);
+			width: 90%;
+            
+		}
+	
+          .wrapper {
+            grid-template-columns:  1fr 0.1fr;
+            grid-template-areas:
+            "account-box "
+            "main-nav"
+            "sidebar-contact"
+            " wrapper-CC"
+            "wrapper-CC"
+            "footer";
+        } 
+        }
     </style>
 </head>
 <body>

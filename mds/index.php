@@ -29,6 +29,7 @@
      <div class="wrapper">
      	<!-- Navigation -->
 		<div class="account-box">
+			<img src="img/logo.png" class="avatar">
 			<?php
 				if(!isset($_SESSION["uid"])) {
 					echo '<a class="btn" href="login.php">Login</a>

@@ -25,6 +25,32 @@
 	  crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+    input[type="text"]{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--primary);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+}
+        h2{
+          font-size: 3rem;
+        }
+      .btn-cart{
+  border :none;
+  outline: none;
+  
+  background: var(--dark);
+  color: var(--light);
+  font-size: 2rem;
+  
+}
+
+.btn-cart:hover{
+  cursor: pointer;
+    background-color: var(--light);
+    color: var(--dark);
+}
         .produse-big-box div {
             text-align: center;
         }
@@ -89,6 +115,7 @@
         	'footer footer footer';
         }
         #titlu-produse {
+
             margin: 0;
             padding: 0.5% 1% 1% 3.5%;
             color: var(--dark);
@@ -125,6 +152,8 @@
         }
         .produs-box {
             float: left;
+            padding: 1%;
+            font-size: 1.5rem;
             background-color: var(--primary);
         }
         .produs-box:last-child {

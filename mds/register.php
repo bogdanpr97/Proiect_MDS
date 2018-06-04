@@ -103,29 +103,121 @@
 	  crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style media="screen">
-        .register-container {
-            grid-area: register-container;
-            display: grid;
-            align-items: center;
-            justify-content: center;
+        body{
+          background-image: url('img-site/login1.jpeg');
+
+          background-repeat: no-repeat;
+
         }
-        .wrapper {
-            grid-template-areas:
-            "account-box account-box account-box"
-            "main-nav main-nav main-nav"
-            "register-container register-container register-container"
-            "footer footer footer";
+        .loginbox{
+
+           width: 580px;
+           height: 810px !important;
+           background-color: rgba(0,0,0,0.5);
+           color: var(--light);
+           position: absolute;
+           top:50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           box-sizing: border-box;
+           padding: 70px 30px;
         }
-        .label-register-form {
-            margin-right: 2%;
+        #login-register{
+        	height: 80%;
         }
-        .register-container div {
-            margin-bottom: 2%;
+        #login-register > .avatar{
+        	top: -12%;
+        	}
+        .avatar{
+           width: 200px;
+           height: 200px;
+           position: absolute;
+
+           top: -20%;
+           left: 33%;
+        }
+        .account-box > .avatar{
+        	width: 150px;
+           height: 150px;
+        	position: absolute;
+        	left: 3%;
+        	top: -2%;
+        }
+        .loginbox h1{
+        	margin:0;
+        	padding: 0 0 20px;
+        	text-align: center;
+            font-size: 3rem;
+        }
+        .loginbox p{
+        	margin: 0;
+        	padding: 0;
+        	font-weight: bold;
+        	font-size: 1.6rem;
+        }
+        .loginbox input{
+        	width: 100%;
+        	margin-bottom: 5%;
+        }
+
+        .loginbox input[type="text"],input[type="password"]{
+         border: none;
+         border-bottom: 1px solid var(--light);
+         color: var(--primary);
+         background:transparent;
+         outline: none;
+         font-size: 1.5rem;
+        }
+        ::placeholder{
+        	color: darkgrey;
+        }
+
+        .loginbox input[type="submit"]{
+        	border :none;
+        	outline: none;
+
+        	background: var(--dark);
+        	color: var(--light);
+        	font-size: 2rem;
+        	border-radius: 20px;
+        }
+
+        .loginbox input[type="submit"]:hover{
+        	cursor: pointer;
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        .loginbox a{
+        text-decoration:none;
+        font-size: 1.5rem;
+        color: var(--light);
+        margin-left: 10%;
+        font-weight: bold;
+        float: left;
         }
 		#register-error {
-			margin-top: 2%;
+			margin-top: -1%;
 			margin-bottom: 0%;
+            overflow: auto;
 		}
+         @media only screen and (max-width: 800px){
+            .loginbox h1{
+                font-size: 1.5rem;
+            }
+            .loginbox h2{
+                font-size: 1.5rem;
+            }
+
+.loginbox a{
+                font-size: 1.5rem;
+            }
+
+            .loginbox{
+           width: 300px;
+           height: 600px;
+           
+        }
+        }
     </style>
 	<script>
 		$(document).ready(function () {
@@ -136,47 +228,22 @@
 	</script>
 </head>
 <body>
-     <div class="wrapper">
-     	<!-- Navigation -->
-	    <div class="account-box">
-        	<a class="btn" href="login.php">Login</a>
-        	<a class="btn" href="register.php">Register</a>
-        </div>
-     	<nav class="main-nav">
-     	<ul>
-     		<li>
-     			<a href="index.php">Acasa</a>
-     		</li>
-     		<li>
-     			<a href="produse.php">Produse</a>
-     		</li>
-     		<li>
-     			<a href="articole.php">Articole</a>
-     		</li>
-     		<li>
-     			<a href="contact.php">Contact</a>
-     		</li>
-			<li>
-				<?php
-				if(isset($_SESSION['produse']) && count($_SESSION['produse']) > 1) {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(' .  count($_SESSION['produse']) . ' produse)</a>';
-				} else if(isset($_SESSION['produse']) && count($_SESSION['produse']) == 0 || !isset($_SESSION['produse'])) {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(0 produse)</a>';
-				} else {
-					echo '<a id="link-cos" href="cos.php">Cosul meu(1 produs)</a>';
-				}
-    			?>
-    			</li>
-         	</ul>
-         </nav>
-         <div class="register-container">
-             <form class="" action="register.php" method="post" style="width: 1000px;">
-                 <div><label class="label-register-form" for="username">Username</label><input type="text" name="username" value="" placeholder="Username" style="margin-right: 2%;">Doar litere, cifre, "." , "-", "_" si minim 5 caractere</div>
-                 <div><label class="label-register-form" for="email">Email</label><input type="text" name="email" value="" placeholder="Email"></div>
-                 <div><label class="label-register-form" for="password">Parola</label><input type="password" name="password" value="" placeholder="Parola" style="margin-right: 2%;">Parola trebuie sa aiba minim 8 caractere, o litera mica, o litera mare, o cifra</div>
-                 <div><label class="label-register-form" for="cpassword">Confirmare parola</label><input type="password" name="cpassword" value="" placeholder="Confirmare parola"></div>
-                 <button  id="buton-register-form" type="submit" name="submit-register">Inregistreaza-te</button>
-             </form>
+        <div class="loginbox" id="login-register">
+          <img src="img-site/logo.png" class="avatar">
+          <h1>Inregistrare</h1>
+          <form action="register.php" method="post">
+            <p>Username</p>
+            <span>Doar litere, cifre, "." , "-", "_" si minim 5 caractere.</span>
+            <input type="text" name="username" placeholder="Username">
+            <p>Email</p>
+            <input type="text" name="email" placeholder="Email">
+            <p>Parola</p>
+            <span>Parola trebuie sa aiba minim 8 caractere, o litera mica, o litera mare, o cifra.</span>
+            <input type="password" name="password"  placeholder="Parola">
+            <p>Verificare Parola</p>
+             <input type="password" name="cpassword"  placeholder="Verifica parola">
+            <input type="submit" name="submit-register" value="Inregistrare">
+          </form>
 			 <div id="register-error">
 			 	<?php
 					if(isset($_GET['error'])) {
@@ -194,15 +261,11 @@
 					}
 					if(isset($_GET['register']) && $_GET['register'] == 'success') {
 						echo '<h4>Contul a fost creat, veti primi un mail cu codul de verificare pe care trebuie sa-l introduceti la prima intrare in cont pentru a-l activa.</h4>';
+                        echo '<a href="index.php" style="margin-left: 0;">Acasa</a>';
 					}
 				?>
 			 </div>
          </div>
-      </div>
-      <footer>
-      	<p>Pro Gains &copy; 2018</p>
-      </footer>
-  </div>
   <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

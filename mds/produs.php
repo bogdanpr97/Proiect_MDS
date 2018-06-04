@@ -25,6 +25,25 @@
 	  crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+
+    input[type="text"]{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--dark);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+}
+ .btn-produs{
+
+  border :none;
+  outline: none;
+  margin: 1%;
+  background: var(--dark);
+  color: var(--light);
+  font-size: 2rem;
+  
+}
         .titlu-side-produse {
             margin: 0;
             padding: 4%;
@@ -61,6 +80,8 @@
         }
         .container-produs {
             grid-area: container-produs;
+            background-color: var(--primary);
+            
             border-left: 2px solid var(--dark);
             margin-left: 5%;
             padding-left: 3%;
@@ -134,7 +155,10 @@
             width: 50%;
         }
         .produs-box {
+            
+
             text-align: center;
+            font-size: 1.5rem;
             color: var(--dark);
             border-bottom: 2px solid var(--primary);
         }
@@ -186,6 +210,26 @@
 		}
         #img-produs {
             width: 20%;
+        }
+        @media only screen and (max-width: 800px){
+          .wrapper-produs {
+            display: grid;
+            grid-template-columns: 0.25fr 1fr 0.3fr;
+            grid-template-areas:
+            "wrapper-side wrapper-side"
+            " container-produs container-produs"
+            "container-similare container-similare";
+            grid-area: wrapper-produs;
+        }
+        .wrapper {
+            font-size: 1rem;
+            grid-template-areas:
+            'account-box account-box account-box'
+            'main-nav main-nav main-nav'
+            'wrapper-produs'
+            'wrapper-produs'
+            'footer footer footer';
+        }
         }
     </style>
     <script type="text/javascript">

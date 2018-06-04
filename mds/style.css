@@ -19,6 +19,7 @@ body{
 }
 
 .btn{
+	
 	background: var(--dark);
 	color:var(--light);
 	padding: 0.6rem 1.3rem;
@@ -303,18 +304,20 @@ footer{
 .topbox-1 input[type="text"]{
  border: none;
  border-bottom: 1px solid var(--light);
- color: var(--primary);
+ color: var(--dark);
  background:transparent;
  outline: none;
  font-size: 1.5rem;
 }
 #button-newsletter{
-	border :none;
-	outline: none;
+	margin-left: 5%;
 	background: var(--dark);
-	color: var(--light);
-	font-size: 2rem;
-	border-radius: 20px;
+	color:var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+	font-size: 1.5rem;
+	
 }
 #button-newsletter:hover{
 	cursor: pointer;

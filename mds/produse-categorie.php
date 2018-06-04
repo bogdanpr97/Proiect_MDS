@@ -25,6 +25,32 @@
 	  crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+     input[type="text"]{
+ border: none;
+ border-bottom: 1px solid var(--light);
+ color: var(--primary);
+ background:transparent;
+ outline: none;
+ font-size: 1.5rem;
+}
+        h2{
+          font-size: 3rem;
+        }
+      .btn-cart{
+  border :none;
+  outline: none;
+  
+  background: var(--dark);
+  color: var(--light);
+  font-size: 2rem;
+  
+}
+
+.btn-cart:hover{
+  cursor: pointer;
+    background-color: var(--light);
+    color: var(--dark);
+}
         .li-side-produse a:hover{
             color: var(--primary);
         }
